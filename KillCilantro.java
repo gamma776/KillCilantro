@@ -11,10 +11,10 @@ public class KillCilantro {
    public static String killCilantro(String str, String badWord, String replacer) { 
    while (str.indexOf(badWord) >= 0) {
     String firstPart = str.substring(0, str.indexOf(badWord));
-   String secondPart = str.substring(str.indexOf(badWord) + badWord.length());
-   str = firstPart + replacer + secondPart;
-   }
-   return str;
+     String secondPart = str.substring(str.indexOf(badWord) + badWord.length());
+      str = firstPart + replacer + secondPart;
+    }
+    return str;
    }
    
 
@@ -24,7 +24,10 @@ System.out.println(killCilantro("testcilantrotest"));
 System.out.println(killCilantro("cilantrotest"));
 System.out.println(killCilantro("nothinghere"));
 System.out.println(killCilantro("testcilantro"));
+System.out.println(killCilantro("cilantrocilantrocilantro"));
 System.out.println(killCilantro("pickles are not good", "not", "very"));
+
+
 
 
 }
