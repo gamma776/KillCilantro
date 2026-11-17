@@ -1,12 +1,13 @@
 public class KillCilantro {
  public static String killCilantro(String str) { 
-  while (str.indexOf("cilantro") >= 0) {
+ String temp = str.toLowerCase(); 
+  while (temp.indexOf("cilantro") >= 0) {
    
-   String firstPart = str.substring(0, str.indexOf("cilantro"));
-   String secondPart = str.substring(str.indexOf("cilantro")+8);
-   str = firstPart + "parsley" + secondPart;
+   String firstPart = temp.substring(0, temp.indexOf("cilantro"));
+   String secondPart = temp.substring(temp.indexOf("cilantro")+8);
+   temp = firstPart + "parsley" + secondPart;
    } 
-   return str;
+   return temp;
    }
    public static String killCilantro(String str, String badWord, String replacer) { 
    while (str.indexOf(badWord) >= 0) {
@@ -26,6 +27,10 @@ System.out.println(killCilantro("nothinghere"));
 System.out.println(killCilantro("testcilantro"));
 System.out.println(killCilantro("cilantrocilantrocilantro"));
 System.out.println(killCilantro("pickles are not good", "not", "very"));
+System.out.println(killCilantro("this cilantro is proof cilantro that the second method cilantro doesnt mess cilantro with the first one cilantro"));
+
+System.out.println(killCilantro("testCilantrotest"));
+System.out.println(killCilantro("testCiLaNtRotest <- cilantro had capitals in it"));
 
 
 
